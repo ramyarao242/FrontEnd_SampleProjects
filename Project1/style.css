@@ -1,0 +1,122 @@
+
+body
+{
+     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:lightgrey;
+}
+.navbar .navbar-default .navbar-fixed-bottom
+{
+    height: 60px;
+}
+ .navHeaderCollapse
+ {
+     font-family: 'Lobster', cursive,"Helvetica Neue", Helvetica, Arial, sans-serif;
+     color: goldenrod;
+ }
+.navbar .navbar-brand
+ {
+    font-family: 'Lobster', cursive,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 30px 12px 12px 12px;
+    font-size: 38px;line-height: 0px;height: 0px;
+    color: goldenrod;
+
+ }
+ #menuJumbotron,#reservationJumbo{
+     margin-bottom: 0px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     color: white;
+     text-shadow: black 0.3em 0.3em 0.3em;
+ }
+#menuJumbotron{  background-image: url(images/food_collage.png);}
+#reservationJumbo{ background-image: url(images/img3.jpg);}
+ #breakfast,#lunch,#brunch,#dinner
+ {
+     margin: 2em 0.3em  0.1em;
+     width: 20em;
+     border-radius: 10px 10px 10px 10px;
+     background-size: cover;
+     font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+     color: #080808;
+     font-weight:900;  }
+
+    #breakfast{
+    background-image: url("images/menu_image1.jpg");
+     }
+    #brunch{
+        background-image: url("images/menu_image2.jpg");
+    }
+    #lunch{
+        background-image: url("images/menu_image3.jpg");
+    }
+    #dinner{
+        background-image: url("images/menu_image4.jpg");
+
+    }
+section,#reg {
+    margin: 30px 0;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#home,#regForm,#newReservation,#ownerhome{
+    margin:0px
+    border-radius: 10px 10px 10px 10px;
+    background-color: darkkhaki;
+    max-width: 750px;
+    position: relative;
+}
+#regFormHead
+{
+    margin-top: 0%;
+    background-color: darkgoldenrod;
+    font-family: 'Lobster', cursive, "Helvetica Neue", Helvetica,'Open Sans' ,Arial, sans-serif;
+    font-size: xx-large;
+    height: 40%;
+    border-radius:  10px 10px 0px 0px;
+   text-align: center;
+}
+#tab-seating .container {
+    padding-left: 4px;
+    padding-right: 4px;
+    width: auto;
+}
+#tab-seating .seats {
+    width: 120px;
+    height: 120px;
+    background: #88959C;
+    margin-right: 500em ;
+    padding-top: 20px;
+}
+#tab-seating .seats p {
+    color: white;
+    margin: 4px auto;
+    width: 100px;
+    text-align: center;
+}
+#tab-seating .seats p .btn-link {
+    color: white;
+}
+
+
+@media (min-width: 512px) {
+    #tab-reservation span.btn-text {
+        display: inline;
+    }
+    .container {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .tab-content {
+        padding: 40px;
+    }
+    ul.nav-tabs.nav-justified>li {
+        float: none;
+    }
+}
+@media (min-width: 1024px) {
+    ul.nav-tabs a span.tab-text {
+        display: inline;
+    }
+}

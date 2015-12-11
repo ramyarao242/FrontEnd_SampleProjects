@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish</title>
+    <link href ="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href ="style.css" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+    <div class = "navbar navbar-inverse navbar-static-top" id="mainNavigation">
+        <div class="container" >
+            <div class ="navbar header">
+
+                <a href="index.html" class = "navbar-brand"><span class="glyphicon glyphicon-glass" ></span> DELISH</a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class ="nav navbar-nav navbar-right" >
+                    <li > <a href = "index.html" ><span class="glyphicon glyphicon-home" ></span> Home</a></li>
+                    <li > <a href = "Menu.html"><span class="glyphicon glyphicon-file" ></span> Menu</a></li>
+                    <li class="active"> <a href = "Reservation.html"> <span class="glyphicon glyphicon-calendar" ></span> Reservations</a></li>
+                    <li> <a href = "http://maps.google.com/maps?daddr=3001+S+Michigan+Ave,+Chicago,+IL+60616"><span class="glyphicon glyphicon-map-marker" ></span> Directions </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-phone" ></span> Contact Us <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">312-412-512</a></li>
+                            <li> <a href="DelishFoods@gmail.com">Email</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in" ></span> Sign In <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#guest" data-toggle="modal" > Guest</a></li>
+                            <li><a href="#owner" data-toggle="modal" > Owner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="jumbotron" id="reservationJumbo">
+        <h1 class="text-center"> DELISH!!! </h1>
+        <p class="text-center"> Relish your Dish, and enjoy the exotic taste of all types of cuisines!!!</p>
+    </div>
+</div>
+
+
+<section>
+    <div class="container" id="home">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#newReservation" data-toggle="tab">New Reservation</a>
+            </li>
+            <li><a href="#tab-changeReservation" data-toggle="tab">Change Existing Reservation</a>
+            </li>
+        </ul>
+        <div id="content" class="tab-content">
+            <div class="tab-pane active" id="newReservation">
+                <h3>Make A Reservation</h3>
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="reserveName">Name</label>
+                        <input type="text" class="form-control" id="reserveName" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reserveEmail">Email</label>
+                        <input type="email" class="form-control" id="reserveEmail" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservePhone">Phone</label>
+                        <input type="tel" class="form-control" id="reservePhone" placeholder="Enter Your Phone">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reserveDate">Date</label>
+                                <input type="date" class="form-control" id="reserveDate" placeholder="MM/DD/YYYY" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reserveTime">Time</label>
+                                <input type="time" class="form-control" id="reserveTime" placeholder="HH:MM" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="reserveSize">Party Size</label>
+                                <input type="number" class="form-control" id="reserveSize" placeholder="# Guests" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label for="reserveSpecial">Special Need</label>
+                                <input type="email" class="form-control" id="reserveSpecial" placeholder="e.g. Birthday, Anniversary etc.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn large-btn btn-primary">Reserve</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="tab-changeReservation">
+                <h3>Change Reservation</h3>
+                <form role="form">
+                    <div class="form-group" >
+                        <label for="cnfid">CNF_ID</label>
+                        <input type="password" class="form-control" id="cnfid" placeholder="Enter CNF_ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="changeTime">New Time</label>
+                        <input type="time" class="form-control" id="changeTime" placeholder="HH:MM">
+                    </div>
+                    <div class="form-group">
+                        <label for="NewDate">New Date</label>
+                        <input type="date" class="form-control" id="NewDate" placeholder="MM/DD/YYYY">
+                    </div>
+                    <div class="form-group">
+                        <label for="newSize">New Party Size</label>
+                        <input type="number" class="form-control" id="newSize" placeholder="# Guests">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn large-btn btn-primary">Submit</button>
+                        <button type="button" class="btn large-btn btn-danger">Cancel Reservation</button>
+                        <button type="button" class="btn btn-link">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id= "guest" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> Guest Sign In </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for = "userName" class="col-sm-3 control-label">
+                            User Name*
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="userName" placeholder="User Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPass" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="guestPass" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <p class="help-block">New Guest? <a href="RegistrationForm.html">Create account</a></p>
+                            <p class="help-block"><a href="RegistrationForm.html">Can't access your account?</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id= "owner" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> Owner Sign In </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for = "ownerUserName" class="col-sm-3 control-label">
+                            User Name*
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="ownerUserName" placeholder="User Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerPass" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="ownerPass" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">Submit<a href="OwnerLogin.html"></a></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

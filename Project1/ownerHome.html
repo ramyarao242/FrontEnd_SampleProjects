@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelishOwner</title>
+    <link href ="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href ="style.css" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+    <div class = "navbar navbar-inverse navbar-static-top" id="mainNavigation">
+        <div class="container" >
+            <div class ="navbar header">
+
+                <a href="index.html" class = "navbar-brand"><span class="glyphicon glyphicon-glass" ></span> DELISH</a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class ="nav navbar-nav navbar-right" >
+                    <li > <a href = "index.html"><span class="glyphicon glyphicon-log-out" ></span> LogOut</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <div class="container" id="ownerhome">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#tab-makeReservation" data-toggle="tab">
+                <span class="glyphicon glyphicon-calendar"></span>
+                <span class="tab-text">New Reservations</span>
+            </a>
+            </li>
+            <li><a href="#tab-reservation" data-toggle="tab">
+                <span class="glyphicon glyphicon-list"></span>
+                <span class="tab-text">List Of Reservations</span></a>
+            </li>
+            <li><a href="#tab-seating" data-toggle="tab">
+                    <span class="glyphicon glyphicon-th"></span>
+                    <span class="tab-text">Seating Availabilty</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-owner" data-toggle="tab">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <span class="tab-text">Employee Profiles </span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-contacts" data-toggle="tab">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="tab-text">Guest Contacts</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content" class="tab-content">
+            <div class="tab-pane active" id="tab-makeReservation">
+                <h3>Make A Reservation</h3>
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="reserveName">Name*</label>
+                        <input type="text" class="form-control" id="reserveName" placeholder="Enter Guest Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reserveEmail">Email*</label>
+                        <input type="email" class="form-control" id="reserveEmail" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservePhone">Phone</label>
+                        <input type="tel" class="form-control" id="reservePhone" placeholder="Enter Guest Phone">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reserveDate">Date*</label>
+                                <input type="date" class="form-control" id="reserveDate" placeholder="MM/DD/YYYY" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="reserveTime">Time*</label>
+                                <input type="time" class="form-control" id="reserveTime" placeholder="HH:MM" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="reserveSize">Party Size*</label>
+                                <input type="number" class="form-control" id="reserveSize" placeholder="# Guests" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label for="reserveSpecial">Special Need</label>
+                                <input type="email" class="form-control" id="reserveSpecial" placeholder="e.g. Birthday, Anniversary etc.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn large-btn btn-primary">Reserve</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="tab-reservation">
+                <h3>Reservation List</h3>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Reservation" id="inputSearch">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul class="pagination pull-right">
+                    <li><a href="#">&laquo;</a>
+                    </li>
+                    <li class="active"><a href="#">1</a>
+                    </li>
+                    <li><a href="#">2</a>
+                    </li>
+                    <li><a href="#">3</a>
+                    </li>
+                    <li><a href="#">4</a>
+                    </li>
+                    <li><a href="#">5</a>
+                    </li>
+                    <li><a href="#">&raquo;</a>
+                    </li>
+                </ul>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>CNF#</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>#</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Praveen Salitra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text">Details</span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="tab-seating">
+                <h3>Seating Area</h3>
+                <div class="container">
+                    <div class="col-xs-12 col-sm-6">
+                        <table class="table table-condensed table-striped">
+                            <thead>
+                            <tr>
+                                <th>Table#</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th>Since</th>
+                                <th>CNF#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="container">
+                            <div class="col-md-4">
+                                <div class="seats img-rounded">
+                                    <p>Table # 1</p>
+                                    <p>Occupied</p>
+                                    <p>
+                                        <button type="button" class="btn btn-link">DA83CD</button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="seats img-circle">
+                                    <p>Table # 1</p>
+                                    <p>Occupied</p>
+                                    <p>
+                                        <button type="button" class="btn btn-link">DA83CD</button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="seats img-rounded">
+                                    <p>Table # 1</p>
+                                    <p>Occupied</p>
+                                    <p>
+                                        <button type="button" class="btn btn-link">DA83CD</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-owner">
+                <h3>Employee Profiles</h3>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>EmpId#</th>
+                        <th>Name</th>
+                        <th>Phone no</th>
+                        <th>Email Id</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a> ram_246@yahoo.com </td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    </tbody>
+                    </table>
+            </div>
+            <div class="tab-pane" id="tab-contacts">
+                <h3>Contact List</h3>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone no</th>
+                        <th>UserName</th>
+                        <th>Email Id</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a> ram_246@yahoo.com </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Ramya Rao</td>
+                        <td>321-421-521</td>
+                        <td>Ramya </td>
+                        <td><a href="ram_246@yahoo.com"></a>ram_246@yahoo.com</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id= "guest" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> Guest Sign In </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for = "userName" class="col-sm-3 control-label">
+                            User Name*
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="userName" placeholder="User Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPass" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="guestPass" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <p class="help-block">New Guest? <a href="RegistrationForm.html">Create account</a></p>
+                            <p class="help-block"><a href="RegistrationForm.html">Can't access your account?</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id= "owner" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> Owner Sign In </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for = "ownerUserName" class="col-sm-3 control-label">
+                            User Name*
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="ownerUserName" placeholder="User Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerPass" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="ownerPass" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">Submit<a href="OwnerLogin.html"></a></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
